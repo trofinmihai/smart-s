@@ -9,7 +9,20 @@ skip_files: false
 
 env_variables:
   # The values here will override those in ".env". This is useful for
-  # production-specific configuration. However, feel free to set these
-  # values in ".env" instead if you prefer.
+  # production-specific configuration. However, feel free to set these values
+  # in ".env" instead if you prefer.
   APP_LOG: errorlog
   STORAGE_DIR: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_HOST: localhost
+  DB_DATABASE: laravel
+  DB_USERNAME: root
+  DB_PASSWORD: Masinaas123?
+  DB_SOCKET: /cloudsql/project-166511:europe-west1:smartshopper
+
+beta_settings:
+    # for Cloud SQL, set this value to the Cloud SQL connection name,
+    # e.g. "project:region:cloudsql-instance"
+    cloud_sql_instances: "YOUR_CLOUDSQL_CONNECTION_NAME"
