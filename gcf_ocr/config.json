@@ -1,0 +1,7 @@
+{
+  "RESULT_TOPIC": "cloud_functionss",
+  "RESULT_BUCKET": "cloud_imagess",
+  "TRANSLATE_TOPIC": "cloud_translationss",
+  "TRANSLATE": true,
+  "TO_LANG": ["en", "fr", "es", "ja", "ru"]
+}

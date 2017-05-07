@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Store extends Model
 {
-    
+   
     /**
      * The attributes that are mass assignable.
      *
@@ -22,6 +22,6 @@ class Product extends Model
      * @var array
      */
     protected $hidden = [
-        'Birthday', 'created_at','updated_at'
+        'id', 'Birthday', 'created_at','updated_at'
     ];
 }

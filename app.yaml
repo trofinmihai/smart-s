@@ -17,7 +17,7 @@ env_variables:
   SESSION_DRIVER: database
   ## Set these environment variables according to your CloudSQL configuration.
   DB_HOST: localhost
-  DB_DATABASE: laravel
+  DB_DATABASE: smart_shopper_db
   DB_USERNAME: root
   DB_PASSWORD: Masinaas123?
   DB_SOCKET: /cloudsql/project-166511:europe-west1:smartshopper
@@ -25,4 +25,4 @@ env_variables:
 beta_settings:
     # for Cloud SQL, set this value to the Cloud SQL connection name,
     # e.g. "project:region:cloudsql-instance"
-    cloud_sql_instances: "YOUR_CLOUDSQL_CONNECTION_NAME"
+    cloud_sql_instances: "project-166511:europe-west1:smartshopper"

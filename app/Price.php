@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Price extends Model
 {
     
     /**
@@ -13,7 +13,7 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'email', 'FirstName','LastName',
+        'id', 'OldPrice', 'OldPriceDate','NewPrice','NewPriceData'
     ];
 
     /**
@@ -22,6 +22,6 @@ class Product extends Model
      * @var array
      */
     protected $hidden = [
-        'Birthday', 'created_at','updated_at'
+        'created_at','updated_at'
     ];
 }
