@@ -41,6 +41,8 @@ class ProductController extends Controller{
      * @var float $Price
      * @var Store $store
      * @var Price $price
+     * @var Shopping $shopping
+     * @var Binding $binding
      * @var Product $product
      * @return JSON
      */
@@ -133,6 +135,9 @@ class ProductController extends Controller{
      * Return the id of specified ProductName
      *
      * @param Request $request, $idStore
+     * @var string $ProductName
+     * @var int $Type
+     * @var Product $product
      * @return int 
      */
 
@@ -153,6 +158,10 @@ class ProductController extends Controller{
      * Return the id of specified StoreName
      *
      * @param Request $request
+     * @var string $StoreName
+     * @var string $Address
+     * @var string $City
+     * @var Store $store
      * @return int 
      */
 
@@ -174,7 +183,16 @@ class ProductController extends Controller{
      * Update price of product in database only if the product, bought from a specified store, already exists
      *
      * @param Request $request
-     * @var 
+     * @var string $ProductName
+     * @var int $idUser
+     * @var string $StoreName
+     * @var Product $product
+     * @var Binding $bindings
+     * @var int $key
+     * @var object $binding
+     * @var int $ProidStore
+     * @var Price $price
+     * @var Shopping $shopping
      * @return JSON
      */
 

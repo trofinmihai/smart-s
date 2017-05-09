@@ -19,6 +19,6 @@ Route::get('/users/{id}', 'UserController@find');
 Route::post('/users', 'UserController@insert');
 
 Route::get('/products', 'ProductController@show');
-// Route::post('/products', 'ProductController@insert');
 Route::post('/products', 'ProductController@checkProduct');
 
+Route::get('/shopping/{id}', 'ShoppingController@show');
