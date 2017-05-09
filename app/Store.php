@@ -13,7 +13,7 @@ class Store extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'email', 'FirstName','LastName',
+        'id', 'Name', 'Address','City',
     ];
 
     /**
@@ -22,6 +22,6 @@ class Store extends Model
      * @var array
      */
     protected $hidden = [
-        'id', 'Birthday', 'created_at','updated_at'
+        'created_at','updated_at'
     ];
 }

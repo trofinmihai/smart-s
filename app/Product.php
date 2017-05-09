@@ -13,7 +13,7 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'email', 'FirstName','LastName',
+        'id', 'Name', 'Type', 'idStore', 'idPrice'
     ];
 
     /**
@@ -22,6 +22,6 @@ class Product extends Model
      * @var array
      */
     protected $hidden = [
-        'Birthday', 'created_at','updated_at'
+        'created_at','updated_at'
     ];
 }

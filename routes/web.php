@@ -16,5 +16,8 @@ Route::get('/', function () {
 });
 Route::get('/users', 'UserController@show');
 Route::get('/users/{id}', 'UserController@find');
-Route::post('/users', 'UserController@store');
+Route::post('/users', 'UserController@insert');
+
+Route::get('/products', 'ProductController@show');
+Route::post('/products', 'ProductController@insert');
 

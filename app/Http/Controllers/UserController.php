@@ -42,14 +42,14 @@ class UserController extends Controller{
      * @return JSON
      */
 
-	public function store(Request $request)
+	public function insert(Request $request)
 	{	
 
 		$user = User::create([		
 					'id' => $request->get('id'),
 					'email' => $request->get('email'),
 					'FirstName' =>$request->get('FirstName'),
-					// 'Birthday' =>date('Y-m-d', strtotime(str_replace('-', '/', $request->get('Birthday')))),
+					'Birthday' =>date('Y-m-d', strtotime(str_replace('-', '/', $request->get('Birthday')))),
 					'LastName' =>$request->get('LastName')
 					
 				]);

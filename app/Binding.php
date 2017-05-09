@@ -13,7 +13,7 @@ class Binding extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'Name', 'Address','City'
+        'idUser', 'idProduct'
     ];
 
     /**
