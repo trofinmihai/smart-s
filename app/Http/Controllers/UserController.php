@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\User;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller{
 
@@ -44,6 +44,19 @@ class UserController extends Controller{
 
 	public function insert(Request $request)
 	{	
+		$this->validate($request, [
+				'id' => 'required',
+				'email' => 'required',
+				'FirstName' =>'required',
+				'LastName' => 'required',
+				'Birthday' => 'required'
+				]);
+
+		// if ($validator->fails()) {
+  //           $message = $validator->errors();
+  //           $this->SetStatusCode(404);
+  //           return $this->RespondWithError($message);
+  //       }
 
 		$user = User::create([		
 					'id' => $request->get('id'),
@@ -54,7 +67,7 @@ class UserController extends Controller{
 					
 				]);
 
-		return $this->success("Welcome!", 201);
+		return $this->success("Welcome!", 200);
 	}
 
 }

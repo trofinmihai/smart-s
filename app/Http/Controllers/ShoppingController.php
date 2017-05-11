@@ -31,11 +31,16 @@ class ShoppingController extends Controller{
 		foreach($items->toArray() as $key => $item)
 		{
 			$product = Product::find($item['idProduct']);
+			$store = Store::find($product->idStore);
+			$price = Price::find($product->idPrice);
 			unset($items[$key]['idProduct']);
-			$items[$key]['Product'] = $product;
+			unset($items[$key]['id']);
+			unset($items[$key]['idUser']);
+			$items[$key]['ProductName'] = $product->Name;
+			$items[$key]['StoreName'] = $store->Name. ", " . $store->Address . ", " . $store->City;
+			$items[$key]['NewPrice'] = $price->NewPrice;
 		}
-		return response()->json($items);
+		return $this->success($items,200);
 	}
-
 
 }

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "ASd";
 });
 Route::get('/users', 'UserController@show');
 Route::get('/users/{id}', 'UserController@find');
